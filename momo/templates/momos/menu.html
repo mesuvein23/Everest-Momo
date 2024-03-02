@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+</head>
+
+<body>
+  <center>
+    <h1>Our Menu</h1>
+    <br>
+    <h2 style="color: #d86005;">Our menu is more than just momos,</h2>
+    <h3>with a variety of dishes to cater to all tastes and prefrences.</h3>
+    <img src="https://i.postimg.cc/4NKpsCFG/temp-Image-ZTz-S96.jpg" class="img-fluid rounded-start" alt="...">
+    <br>
+</center>
+
+<!-- <div class="card-group">
+  {% for i in menus %}
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{i.image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="font-weight: bolder;">{{i.title}}</h5>
+            <p class="card-text" style="font-weight: bolder;">Rs.{{i.price}}</p>
+            <p class="card-text" style="font-size: medium;">{{i.description}}</p>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+</div> -->
+<br>
+<br>
+<br>
+
+<center>
+  {% for category,momos in data.items %}
+<h1>{{category}}</h1>
+{% for i in momos %}
+   <div class="card-group">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{i.image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="font-weight: bolder;">{{i.title}}</h5>
+            <p class="card-text" style="font-weight: bolder;">Rs.{{i.price}}</p>
+            <p class="card-text" style="font-size: medium;">{{i.description}}</p>
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
+</center>
+
+</body>
+</html>
+
+{% endblock%}

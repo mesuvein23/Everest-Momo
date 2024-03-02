@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    h1 {
+        text-align: center;
+    color: #2f6464;
+    font-family:cursive ;
+    margin: 2rem;
+    margin-block-start: 6rem;
+    font-size: 2.5rem;
+}
+h2{
+    
+    font-size: x-large;
+    color: gray;
+    text-align: center;
+
+}
+h3,h4{
+    font-weight: bolder;
+
+    display: inline;
+}
+</style>
+
+<h1>Our Contact</h1>
+<h2>GET IN TOUCH</h2>
+<center>
+<h3 style="color:#d86005;">Our Friendly Team</h3>
+<h4>Would love to hear from you</h4>
+</center>
+
+<div class="flex-item">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11459.247661645653!2d85.4225988670386!3d27.669765749289823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b8629fedd3b%3A0xbeb0137cdbec3bac!2sJB%20FURNITURE!5e0!3m2!1sen!2snp!4v1706094533952!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div class="card">
+    
+    <div class="form-container">
+      <!-- Form goes here -->
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
